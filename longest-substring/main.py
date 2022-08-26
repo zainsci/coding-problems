@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/longest-substring-without-repeating-characters
 problem: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+type: medium
 site: LeetCode
 """
 

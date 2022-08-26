@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/running-sum-of-1d-array
 problem: https://leetcode.com/problems/running-sum-of-1d-array
+type: easy
 site: LeetCode
 """
 

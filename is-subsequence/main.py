@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/is-subsequence
 problem: https://leetcode.com/problems/is-subsequence
+type: easy
 site: LeetCode
 """
 

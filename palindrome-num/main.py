@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/palindrome-number/
 problem: https://leetcode.com/problems/palindrome-number/
+type: easy
 site: LeetCode
 """
 

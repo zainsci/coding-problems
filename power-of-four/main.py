@@ -4,6 +4,7 @@
 """
 source: https://leetcode.com/problems/power-of-four/
 problem: https://leetcode.com/problems/power-of-four/
+type: easy
 site: LeetCode
 """
 

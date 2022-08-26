@@ -4,6 +4,7 @@
 """
 source: https://leetcode.com/problems/ransom-note/
 problem: https://leetcode.com/problems/ransom-note/
+type: easy
 site: LeetCode
 """
 

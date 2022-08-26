@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/roman-to-integer
 problem: https://leetcode.com/problems/roman-to-integer
+type: easy
 site: LeetCode
 """
 

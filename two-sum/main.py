@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/two-sum
 problem: https://leetcode.com/problems/two-sum/
+type: easy
 site: LeetCode
 """
 

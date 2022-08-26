@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/median-of-two-sorted-arrays
 problem: https://leetcode.com/problems/median-of-two-sorted-arrays
+type: hard
 site: LeetCode
 """
 

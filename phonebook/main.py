@@ -3,6 +3,7 @@
 """
 source: https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/?no-filter=true
 problem: https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem
+type: easy
 site: HackerRank
 """
 

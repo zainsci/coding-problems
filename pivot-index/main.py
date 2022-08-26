@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/find-pivot-index/
 problem: https://leetcode.com/problems/find-pivot-index/
+type: easy
 site: LeetCode
 """
 

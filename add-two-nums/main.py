@@ -3,6 +3,7 @@
 """
 source: https://leetcode.com/problems/add-two-numbers/
 problem: https://leetcode.com/problems/add-two-numbers/
+type: medium
 site: LeetCode
 """
 
