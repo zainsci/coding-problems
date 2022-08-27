@@ -1,5 +1,14 @@
 #! /bin/python3
 
+
+"""
+source: https://leetcode.com/problems/reverse-linked-list
+problem: https://leetcode.com/problems/reverse-linked-list
+type: easy
+site: LeetCode
+"""
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
