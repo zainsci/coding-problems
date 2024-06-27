@@ -23,19 +23,26 @@ site: LeetCode
 
 #         return True
 
+# Solution 02
+# class Solution:
+#     # def uniqueOccurrences(self, arr: List[int]) -> bool:
+#     def uniqueOccurrences(self, arr):
+#         arr_nums = Counter(arr)
+#         checked = set()
+
+#         for num in arr_nums.values():
+#             if num in checked:
+#                 return False
+#             else:
+#                 checked.add(num)
+#         return True
+
 
 class Solution:
     # def uniqueOccurrences(self, arr: List[int]) -> bool:
     def uniqueOccurrences(self, arr):
-        arr_nums = Counter(arr)
-        checked = set()
-
-        for num in arr_nums.values():
-            if num in checked:
-                return False
-            else:
-                checked.add(num)
-        return True
+        arr_count = Counter(arr)
+        return len(arr_count) == len(set(arr_count.values()))
 
 
 def main():
