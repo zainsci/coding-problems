@@ -10,16 +10,31 @@ site: LeetCode
 """
 
 
+# Solution 01
+# class Solution:
+#     # def uniqueOccurrences(self, arr: List[int]) -> bool:
+#     def uniqueOccurrences(self, arr):
+#         arr_nums = Counter(arr)
+#         arr_sorted = sorted(list(arr_nums.values()))
+
+#         for i in range(1, len(arr_sorted)):
+#             if arr_sorted[i] == arr_sorted[i-1]:
+#                 return False
+
+#         return True
+
+
 class Solution:
     # def uniqueOccurrences(self, arr: List[int]) -> bool:
     def uniqueOccurrences(self, arr):
         arr_nums = Counter(arr)
-        arr_sorted = sorted(list(arr_nums.values()))
+        checked = set()
 
-        for i in range(1, len(arr_sorted)):
-            if arr_sorted[i] == arr_sorted[i-1]:
+        for num in arr_nums.values():
+            if num in checked:
                 return False
-
+            else:
+                checked.add(num)
         return True
 
 
