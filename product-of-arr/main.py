@@ -2,6 +2,14 @@
 from functools import reduce
 
 
+"""
+source: https://leetcode.com/problems/product-of-array-except-self/
+problem: https://leetcode.com/problems/product-of-array-except-self/
+type: Medium
+site: LeetCode
+"""
+
+
 class Solution:
     # def productExceptSelf(self, nums: List[int]) -> List[int]:
     def productExceptSelf(self, nums):
