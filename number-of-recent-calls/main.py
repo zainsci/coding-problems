@@ -1,4 +1,5 @@
 #! /bin/python3
+from collections import deque
 
 """
 source: https://leetcode.com/problems/number-of-recent-calls/
@@ -11,19 +12,15 @@ site: LeetCode
 class RecentCounter:
 
     def __init__(self):
-        self.curr_count = []
+        self.curr_count = deque()
 
     def ping(self, t: int) -> int:
         self.curr_count.append(t)
         if len(self.curr_count) == 1:
             return 1
 
-        idx = 0
-        while len(self.curr_count) > idx:
-            if self.curr_count[idx] < t-3000:
-                self.curr_count.pop(0)
-                continue
-            idx += 1
+        while self.curr_count and self.curr_count[0] < t-3000:
+            self.curr_count.popleft()
 
         return len(self.curr_count)
 
