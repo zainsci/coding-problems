@@ -1,5 +1,13 @@
 #! /bin/python3
 
+"""
+source: https://leetcode.com/problems/longest-common-prefix/
+problem: https://leetcode.com/problems/longest-common-prefix/
+type: Easy
+site: LeetCode 
+"""
+
+
 class Solution:
     # def longestCommonPrefix(self, strs: List[str]) -> str:
     def longestCommonPrefix(self, strs):
