@@ -12,7 +12,9 @@ submission: https://leetcode.com/problems/reverse-degree-of-a-string/submissions
 class Solution:
     def reverseDegree(self, s: str) -> int:
         idxs = {key: 26 - val for val,
-                key in enumerate("abcdefghijklmnopqrstuvwxyz")}
+                key in enumerate(
+                    [chr(96+i) for i in range(1, 27)]
+                )}
 
         total = 0
         for x, y in enumerate(s):
