@@ -38,6 +38,9 @@ submission:
 """
 
 def main():
+    sol = Solution()
+
+    print()
     pass
 
 if __name__ == "__main__":
