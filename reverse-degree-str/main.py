@@ -18,6 +18,7 @@ class Solution:
         for x, y in enumerate(s):
 
             total += idxs[y] * (x+1)
+
         return total
 
 
