@@ -5,7 +5,7 @@ source: https://leetcode.com/problems/find-the-number-of-good-pairs-i/submission
 problem: https://leetcode.com/problems/find-the-number-of-good-pairs-i/submissions/1626438294/
 type: Easy
 site: LeetCode
-submission: https://leetcode.com/problems/find-the-number-of-good-pairs-i/submissions/1626438294/
+submission: https://leetcode.com/problems/find-the-number-of-good-pairs-i/submissions/1626439483/
 """
 
 
@@ -14,9 +14,9 @@ class Solution:
     def numberOfPairs(self, nums1, nums2, k):
         count = 0
 
-        for i in nums1:
-            for j in nums2:
-                if i % (j*k) == 0:
+        for i in range(len(nums1)):
+            for j in range(len(nums2)):
+                if nums1[i] % (nums2[j]*k) == 0:
                     count += 1
 
         return count
