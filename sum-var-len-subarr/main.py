@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 """
-source: 
-problem: 
-type: 
-site: 
-submission: 
+source: https://leetcode.com/problems/sum-of-variable-length-subarrays/
+problem: https://leetcode.com/problems/sum-of-variable-length-subarrays/
+type: Easy
+site: LeetCode
+submission: https://leetcode.com/problems/sum-of-variable-length-subarrays/submissions/1626489915/
 """
 
 
