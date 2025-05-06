@@ -6,7 +6,7 @@ source: https://leetcode.com/problems/group-the-people-given-the-group-size-they
 problem: https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/submissions/1627055584/
+submission: https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/submissions/1627061040/
 """
 
 
@@ -14,12 +14,14 @@ class Solution:
     # def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
     def groupThePeople(self, groupSizes):
         groups = {}
+        group_keys = set()
 
         for i in range(len(groupSizes)):
             curr_group = groupSizes[i]
 
-            if curr_group not in groups.keys():
+            if curr_group not in group_keys:
                 groups[curr_group] = [[i]]
+                group_keys.add(curr_group)
 
             else:
                 if len(groups[curr_group][-1]) == curr_group:
