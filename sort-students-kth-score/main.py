@@ -5,7 +5,7 @@ source: https://leetcode.com/problems/sort-the-students-by-their-kth-score/
 problem: https://leetcode.com/problems/sort-the-students-by-their-kth-score/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/sort-the-students-by-their-kth-score/submissions/1626937230/
+submission: https://leetcode.com/problems/sort-the-students-by-their-kth-score/submissions/1626938680/
 """
 
 
@@ -17,11 +17,13 @@ class Solution:
         for arr in score:
             levels[arr[k]] = arr
 
-        sort = sorted(levels.keys())[::-1]
+        sort = sorted(levels.keys())
 
         ans = []
-        for i in range(len(sort)):
-            ans.append(levels[sort[i]])
+        n = len(sort)-1
+        while n >= 0:
+            ans.append(levels[sort[n]])
+            n -= 1
 
         return ans
 
