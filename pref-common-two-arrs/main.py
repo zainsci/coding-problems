@@ -5,7 +5,7 @@ source: https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays
 problem: https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/submissions/1627079287/
+submission: https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/submissions/1627081720/
 """
 
 
@@ -14,6 +14,7 @@ class Solution:
     def findThePrefixCommonArray(self, A, B):
         ans = []
         counter = {}
+        curr_commons = 0
 
         for i in range(len(A)):
             curr_a = A[i]
@@ -23,6 +24,7 @@ class Solution:
                 if curr_a == curr_b:
                     ans.append(1)
                     counter[curr_a] = 2
+                    curr_commons += 1
                 else:
                     ans.append(0)
                     counter[curr_a] = 1
@@ -33,13 +35,15 @@ class Solution:
                 counter[curr_a] = 1
             else:
                 counter[curr_a] += 1
+                curr_commons += 1
 
             if curr_b not in counter.keys():
                 counter[curr_b] = 1
             else:
                 counter[curr_b] += 1
+                curr_commons += 1
 
-            ans.append(sum([1 if x >= 2 else 0 for x in counter.values()]))
+            ans.append(curr_commons)
 
         return ans
 
