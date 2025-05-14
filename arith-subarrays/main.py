@@ -6,14 +6,14 @@ source: https://leetcode.com/problems/arithmetic-subarrays/
 problem: https://leetcode.com/problems/arithmetic-subarrays/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/arithmetic-subarrays/submissions/1633674473/
+submission: https://leetcode.com/problems/arithmetic-subarrays/submissions/1633674781/
 """
 
 
 class Solution:
     # def checkArithmeticSubarrays(self, nums: List[int], l: List[int], r: List[int]) -> List[bool]:
     def checkArithmeticSubarrays(self, nums, l, r):
-        ans = [None for x in range(len(l))]
+        ans = []
 
         for i in range(len(l)):
             sub = sorted(nums[l[i]:r[i]+1])
@@ -25,7 +25,7 @@ class Solution:
                     is_sub = False
                     break
 
-            ans[i] = is_sub
+            ans.append(is_sub)
 
         return ans
 
