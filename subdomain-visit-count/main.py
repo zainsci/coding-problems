@@ -5,7 +5,7 @@ source: https://leetcode.com/problems/subdomain-visit-count/
 problem: https://leetcode.com/problems/subdomain-visit-count/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/subdomain-visit-count/submissions/1635411443/
+submission: https://leetcode.com/problems/subdomain-visit-count/submissions/1635416756/
 """
 
 
@@ -15,18 +15,14 @@ class Solution:
         count = {}
 
         for x in cpdomains:
-            c, d = x.split(" ")[0], x.split(" ")[1]
+            c, d = x.split(" ")
             deps = d.split(".")
 
             for y in range(len(deps)):
                 dom = ".".join(deps[y:])
+                count[dom] = count.get(dom, 0) + int(c)
 
-                if dom in count.keys():
-                    count[dom] += int(c)
-                else:
-                    count[dom] = int(c)
-
-        return [f"{count[x]} {x}" for x in count.keys()]
+        return [f"{count} {sub}" for sub, count in count.items()]
 
 
 def main():
