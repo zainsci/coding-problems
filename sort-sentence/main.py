@@ -5,20 +5,14 @@ source: https://leetcode.com/problems/sorting-the-sentence/
 problem: https://leetcode.com/problems/sorting-the-sentence/
 type: Easy
 site: LeetCode
-submission: https://leetcode.com/problems/sorting-the-sentence/submissions/1636211618/
+submission: https://leetcode.com/problems/sorting-the-sentence/submissions/1636215176/
 """
 
 
 class Solution:
     def sortSentence(self, s: str) -> str:
-        s = s.split(" ")
-        ans = [None for _ in range(len(s))]
-
-        for i in range(len(s)):
-            word = s[i]
-            ans[int(word[-1])-1] = word[:-1]
-
-        return " ".join(ans)
+        return " ".join([i[1] for i in sorted({x[-1]: x[:-1]
+                                               for x in s.split(" ")}.items(), key=lambda x:  x[0])])
 
 
 def main():
