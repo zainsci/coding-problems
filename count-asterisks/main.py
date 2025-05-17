@@ -11,13 +11,8 @@ submission: https://leetcode.com/problems/count-asterisks/submissions/1636321199
 
 class Solution:
     def countAsterisks(self, s: str) -> int:
-        s = s.split("|")
-        count = 0
-
-        for i in range(0, len(s), 2):
-            count += s[i].count("*")
-
-        return count
+        return sum([s.split("|")[x].count("*")
+                    for x in range(0, len(s.split("|")), 2)])
 
 
 def main():
