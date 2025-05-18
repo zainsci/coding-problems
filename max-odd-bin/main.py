@@ -8,6 +8,12 @@ site: LeetCode
 submission: https://leetcode.com/problems/maximum-odd-binary-number/submissions/1637482902/
 """
 
+# one-liner
+# submmission: https://leetcode.com/problems/maximum-odd-binary-number/submissions/1637483242/
+# class Solution:
+#     def maximumOddBinaryNumber(self, s: str) -> str:
+#         return "1"*(s.count("1")-1) + "0"*s.count("0") + "1"
+
 
 class Solution:
     # def maximumOddBinaryNumber(self, s: str) -> str:
