@@ -13,21 +13,20 @@ import (
 )
 
 func minSteps(s string, t string) int {
-	count_s := make(map[string]int)
-	count_t := make(map[string]int)
+	count := make(map[string]int)
 	ans := 0
 
 	for i := range len(s) {
-		count_s[string(s[i])] += 1
+		count[string(s[i])] += 1
 	}
 
 	for i := range len(t) {
-		count_t[string(t[i])] += 1
+		count[string(t[i])] -= 1
 	}
 
-	for key, val := range count_t {
-		if count_t[key] > count_s[key] {
-			ans += val - count_s[key]
+	for _, v := range count {
+		if v < 0 {
+			ans += -v
 		}
 	}
 
