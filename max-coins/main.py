@@ -6,20 +6,15 @@ source: https://leetcode.com/problems/maximum-number-of-coins-you-can-get/
 problem: https://leetcode.com/problems/maximum-number-of-coins-you-can-get/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/maximum-number-of-coins-you-can-get/submissions/1647908102/
+submission: https://leetcode.com/problems/maximum-number-of-coins-you-can-get/submissions/1647913031/
 """
 
 
 class Solution:
     # def maxCoins(self, piles: List[int]) -> int:
     def maxCoins(self, piles):
-        piles = deque(sorted(piles))
-        count = 0
-        for i in range(len(piles)//3):
-            piles.pop()
-            count += piles.pop()
-
-        return count
+        piles.sort(reverse=True)
+        return sum(piles[x] for x in range(1, (len(piles)//3)*2, 2))
 
 
 def main():
