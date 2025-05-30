@@ -5,7 +5,7 @@ source: https://leetcode.com/problems/evaluate-reverse-polish-notation/
 problem: https://leetcode.com/problems/evaluate-reverse-polish-notation/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/evaluate-reverse-polish-notation/submissions/1648927972/
+submission: https://leetcode.com/problems/evaluate-reverse-polish-notation/submissions/1648932305/
 """
 
 
@@ -15,29 +15,28 @@ class Solution:
         stack = []
 
         for token in tokens:
-            try:
-                num = int(token)
-                stack.append(num)
-            except ValueError:
-                if token == "+":
-                    a = stack.pop()
-                    b = stack.pop()
-                    stack.append(b + a)
+            if token == "+":
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(b + a)
 
-                if token == "-":
-                    a = stack.pop()
-                    b = stack.pop()
-                    stack.append(b - a)
+            elif token == "-":
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(b - a)
 
-                if token == "*":
-                    a = stack.pop()
-                    b = stack.pop()
-                    stack.append(b * a)
+            elif token == "*":
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(b * a)
 
-                if token == "/":
-                    a = stack.pop()
-                    b = stack.pop()
-                    stack.append(int(b / a))
+            elif token == "/":
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(int(b / a))
+
+            else:
+                stack.append(int(token))
 
         return stack[0]
 
