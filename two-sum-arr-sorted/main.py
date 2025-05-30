@@ -5,23 +5,24 @@ source: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 problem: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/1648981664/
+submission: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/1648983872/
 """
 
 
 class Solution:
     # def twoSum(self, numbers: List[int], target: int) -> List[int]:
     def twoSum(self, numbers, target):
+        left, right = 0, len(numbers)-1
 
-        for num in numbers:
-            idx = numbers.index(num)
-            sec = target-num
+        while left < right:
+            total = numbers[left] + numbers[right]
 
-            if num == sec:
-                return [idx+1, idx+2]
-
-            if target-num in numbers:
-                return [idx+1, numbers.index(target-num)+1]
+            if total == target:
+                return [left+1, right+1]
+            elif total > target:
+                right -= 1
+            else:
+                left += 1
 
 
 def main():
