@@ -5,47 +5,34 @@ source: https://leetcode.com/problems/max-consecutive-ones-iii/
 problem: https://leetcode.com/problems/max-consecutive-ones-iii/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/max-consecutive-ones-iii/submissions/1649641063/
+submission: https://leetcode.com/problems/max-consecutive-ones-iii/submissions/1649646576/
 """
 
 
 class Solution:
     # def longestOnes(self, nums: List[int], k: int) -> int:
     def longestOnes(self, nums, k):
-        left, right, total = 0, 0, 0
-        zeros = []
-        big = float("-inf")
+        left, right, total, zeros, big = 0, 0, 0, 0, 0
         n = len(nums)
 
         while right < n:
             num = nums[right]
+            right += 1
 
             if num == 1:
                 total += 1
+            else:
+                zeros += 1
 
-                if len(zeros) > k:
-                    if nums[left] == 0:
-                        left += 1
-                        zeros = zeros[1:]
-                    else:
-                        total -= 1
-                        left += 1
-
-            elif num == 0:
-                zeros.append(right)
-
-                if len(zeros) > k:
-                    if nums[left] == 0:
-                        left += 1
-                        zeros = zeros[1:]
-                    else:
-                        total -= 1
-                        left += 1
-
-            if len(zeros) <= k:
-                big = max(big, total+len(zeros))
-
-            right += 1
+            if zeros > k:
+                if nums[left] == 0:
+                    left += 1
+                    zeros -= 1
+                else:
+                    total -= 1
+                    left += 1
+            else:
+                big = max(big, total+zeros)
 
         return big
 
