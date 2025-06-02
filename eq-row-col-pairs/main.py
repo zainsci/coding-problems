@@ -5,7 +5,7 @@ source: https://leetcode.com/problems/equal-row-and-column-pairs/
 problem: https://leetcode.com/problems/equal-row-and-column-pairs/
 type: Medium
 site: LeetCode
-submission: https://leetcode.com/problems/equal-row-and-column-pairs/submissions/1651827529/
+submission: https://leetcode.com/problems/equal-row-and-column-pairs/submissions/1651833609/
 """
 
 
@@ -13,13 +13,14 @@ class Solution:
     # def equalPairs(self, grid: List[List[int]]) -> int:
     def equalPairs(self, grid):
         count = 0
+        cols = []
+        for j in range(len(grid)):
+            col = [grid[k][j] for k in range(len(grid))]
+            cols.append(col)
 
         for i in range(len(grid)):
-            row = grid[i]
             for j in range(len(grid)):
-                col = [grid[k][j] for k in range(len(grid))]
-
-                if row == col:
+                if grid[i] == cols[j]:
                     count += 1
 
         return count
