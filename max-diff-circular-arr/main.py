@@ -8,6 +8,12 @@ site: LeetCode
 submission: https://leetcode.com/problems/maximum-difference-between-adjacent-elements-in-a-circular-array/submissions/1662140578/
 """
 
+# Submission: https://leetcode.com/problems/maximum-difference-between-adjacent-elements-in-a-circular-array/submissions/1662143550/
+# One-Liner
+# class Solution:
+#     def maxAdjacentDistance(self, nums: List[int]) -> int:
+#         return max(abs(nums[x-1]-nums[x]) for x in range(len(nums)))
+
 
 class Solution:
     # def maxAdjacentDistance(self, nums: List[int]) -> int:
